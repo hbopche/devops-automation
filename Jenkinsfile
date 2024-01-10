@@ -29,7 +29,7 @@ pipeline {
                     withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
                     sh 'docker login -u hbopche -p ${dockerhubpwd}'    
 }
-                    sh 'docker push hbopche/devops-automation:hbopche/devops-automation'
+                    sh 'docker push hbopche/devops-automation:devops-automation'
                 }
             }
         }
