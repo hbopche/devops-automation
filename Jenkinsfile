@@ -14,7 +14,6 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean install"
-                sh "mvn clean package"
             }
         }
         stage('Build Docker Image') {
