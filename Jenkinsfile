@@ -23,5 +23,16 @@ pipeline {
                 }
             }
         }
+        stage('Push to DockerHub') {
+            steps {
+                script {
+                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
+                    sh 'docker login -u hbopche -p ${dockerhubpwd}'    
+    // some block
+}
+                    docker push hbopche/devops-automation:myapp
+                }
+            }
+        }
     }
 }
