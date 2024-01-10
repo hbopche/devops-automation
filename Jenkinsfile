@@ -19,7 +19,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build --build-arg JAR_FILE=target/devops-integration.jar -t harsh/myapp .'
+                    sh 'docker build --build-arg JAR_FILE=target/devops-integration.jar -t hbopche/devops-integration .'
                 }
             }
         }
